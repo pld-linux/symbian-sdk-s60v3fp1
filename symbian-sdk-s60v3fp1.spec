@@ -17,7 +17,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Symbian s60v3 FP1 SDK.
 
-%description -l pl
+%description -l pl.UTF-8
 SDK Symbiana s60v3 FP1.
 
 %prep
