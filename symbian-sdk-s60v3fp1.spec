@@ -2,12 +2,13 @@ Summary:	Symbian s60v3 FP1 SDK
 Summary(pl.UTF-8):	SDK Symbiana s60v3 FP1
 Name:		symbian-sdk-s60v3fp1
 Version:	1.07
-Release:	1
+Release:	2
 License:	Nokia EULA
 Group:		Developement
 Source0:	http://www.martin.st/symbian/gnupoc-package-%{version}.tar.gz
 # Source0-md5:	4d3f903c3952b028b54e3ff5c657e527
 Source1:	S60-SDK-200634-3.1-Cpp-f.1090b.zip
+Source2:	%{name}-gcc4.patch
 URL:		http://www.martin.st/symbian/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -36,6 +37,9 @@ cd sdks
 rm -rf $RPM_BUILD_ROOT%{_datadir}/symbian/s60v3fp1/epoc32/tools_orig
 
 install makelinkdir $RPM_BUILD_ROOT%{_bindir}
+
+cd $RPM_BUILD_ROOT
+patch -p1 < %{SOURCE2}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
