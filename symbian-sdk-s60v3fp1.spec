@@ -10,6 +10,7 @@ Source0:	http://www.martin.st/symbian/gnupoc-package-%{version}.tar.gz
 Source1:	S60-SDK-200634-3.1-Cpp-f.1090b.zip
 Source2:	%{name}-gcc4.patch
 URL:		http://www.martin.st/symbian/
+BuildRequires:	unzip
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		no_install_post_strip	1
